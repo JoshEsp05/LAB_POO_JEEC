@@ -1,1 +1,1 @@
-Practias de Laboratorio de Pogramacion Orientada a Objetos 
+Practicas de Laboratorio de Programacion Orientada a Objetos 
