@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10"
+      alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.InventarioController">
+
+    <Label text="Control de Inventario"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="txtNombre"
+               promptText="Nombre del equipo"/>
+
+    <TextField fx:id="txtCantidad"
+               promptText="Cantidad"/>
+
+    <ComboBox fx:id="comboEstado"
+              promptText="Estado"/>
+
+    <Button text="Agregar Equipo"
+            onAction="#agregarEquipo"/>
+
+    <Button text="Actualizar Equipo"
+        onAction="#actualizarEquipo"/>
+
+    <Button text="Eliminar Equipo"
+            onAction="#eliminarEquipo"/>
+
+    <TableView fx:id="tablaEquipos"
+               prefWidth="600">
+
+        <columns>
+
+            <TableColumn fx:id="colNombre"
+                         text="Equipo"
+                         prefWidth="200"/>
+
+            <TableColumn fx:id="colCantidad"
+                         text="Cantidad"
+                         prefWidth="150"/>
+
+            <TableColumn fx:id="colEstado"
+                         text="Estado"
+                         prefWidth="200"/>
+
+        </columns>
+
+    </TableView>
+
+</VBox>

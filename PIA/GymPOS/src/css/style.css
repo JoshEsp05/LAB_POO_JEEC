@@ -1,0 +1,35 @@
+.sidebar {
+    -fx-background-color: #1f2937;
+    -fx-padding: 15;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-alignment: CENTER_LEFT;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #374151;
+    -fx-background-radius: 6;
+}
+
+.sidebar-button:pressed {
+    -fx-background-color: #4b5563;
+}
+
+.header {
+    -fx-background-color: #111827;
+    -fx-padding: 12;
+}
+
+.title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+
+

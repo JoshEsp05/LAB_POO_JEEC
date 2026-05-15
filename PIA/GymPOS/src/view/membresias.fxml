@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.MembresiaController">
+
+    <Label text="Sistema de Membresías" />
+
+    <ComboBox fx:id="comboClientes" promptText="Selecciona Cliente"/>
+    <ComboBox fx:id="comboPlanes" promptText="Selecciona Plan"/>
+
+    <Button text="Asignar Membresía" onAction="#asignarMembresia"/>
+
+    <TableView fx:id="tablaMembresias" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="colCliente" text="Cliente" prefWidth="150"/>
+            <TableColumn fx:id="colPlan" text="Plan" prefWidth="150"/>
+            <TableColumn fx:id="colEstado" text="Estado" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+</VBox>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.DashboardController"
+            style="-fx-background-color: #f4f6f8;">
+
+    <!-- HEADER SUPERIOR -->
+    <top>
+        <HBox styleClass="header" spacing="10" maxWidth="Infinity">
+
+            <!-- TÍTULO -->
+            <Label text="🏋 GymPOS Dashboard"
+                   styleClass="title"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <!-- BOTONES DE VENTANA -->
+            <HBox spacing="8" alignment="CENTER_RIGHT">
+
+                <Button text="—"
+                        onAction="#minimizar"
+                        style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;"/>
+
+                <Button text="⬜"
+                        onAction="#maximizar"
+                        style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;"/>
+
+                <Button text="✕"
+                        onAction="#cerrar"
+                        style="-fx-background-color: transparent; -fx-text-fill: #ff4d4d; -fx-font-size: 14px;"/>
+
+            </HBox>
+
+        </HBox>
+    </top>
+
+    <!-- MENÚ LATERAL -->
+    <left>
+        <VBox styleClass="sidebar" spacing="12" prefWidth="190">
+
+            <Label text="MENÚ"
+                   style="-fx-text-fill: #9ca3af; -fx-font-size: 12px;"/>
+
+            <Button text="Clientes"
+                    onAction="#cargarClientes"
+                    styleClass="sidebar-button"/>
+
+            <Button text="Membresías"
+                    onAction="#cargarMembresias"
+                    styleClass="sidebar-button"/>
+        
+            <Button text="Calendario"
+                    onAction="#cargarCalendario"
+                    styleClass="sidebar-button"/>
+
+            <Button text="Acceso"
+                    onAction="#cargarAcceso"
+                    styleClass="sidebar-button"/>
+        
+
+            <Button text="Inventario"
+                    onAction="#cargarInventario"
+                    styleClass="sidebar-button"/>
+
+            <Button text="Reportes"
+                    onAction="#cargarReportes"
+                    styleClass="sidebar-button"/>
+
+        </VBox>
+    </left>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <center>
+        <StackPane fx:id="contenedor"
+           maxWidth="Infinity"
+           maxHeight="Infinity"
+           style="-fx-padding: 20;"/>
+    </center>
+
+</BorderPane>

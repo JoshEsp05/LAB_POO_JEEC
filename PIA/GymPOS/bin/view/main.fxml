@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.MainController">
+
+    <Label text="Gestión de Clientes" />
+
+    <TextField fx:id="txtId" promptText="ID"/>
+    <TextField fx:id="txtNombre" promptText="Nombre"/>
+    <TextField fx:id="txtEmail" promptText="Email"/>
+
+    <Button fx:id="btnAgregar" text="Agregar Cliente" onAction="#agregarCliente"/>
+    <Button text="Eliminar Cliente" onAction="#eliminarCliente"/>
+    <Button text="Actualizar Cliente" onAction="#actualizarCliente"/>
+    <Button text="Generar Reporte" onAction="#generarReporte"/>
+    
+
+    <TableView fx:id="tablaClientes" prefWidth="400">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="100"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150"/>
+            <TableColumn fx:id="colEmail" text="Email" prefWidth="150"/>
+            <TableColumn fx:id="colMembresia" text="Membresía" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+</VBox>
