@@ -12,8 +12,9 @@
         <HBox styleClass="header" spacing="10" maxWidth="Infinity">
 
             <!-- TÍTULO -->
-            <Label text="🏋 GymPOS Dashboard"
-                   styleClass="title"/>
+            <Label text="GYMPOS"
+                styleClass="title"
+                maxWidth="Infinity"/>
 
             <Pane HBox.hgrow="ALWAYS"/>
 
@@ -39,33 +40,33 @@
 
     <!-- MENÚ LATERAL -->
     <left>
-        <VBox styleClass="sidebar" spacing="12" prefWidth="190">
+        <VBox styleClass="sidebar" spacing="12" prefWidth="220">
 
             <Label text="MENÚ"
                    style="-fx-text-fill: #9ca3af; -fx-font-size: 12px;"/>
 
-            <Button text="Clientes"
+            <Button text="👥  Clientes"
                     onAction="#cargarClientes"
                     styleClass="sidebar-button"/>
 
-            <Button text="Membresías"
+            <Button text="💳  Membresías"
                     onAction="#cargarMembresias"
                     styleClass="sidebar-button"/>
         
-            <Button text="Calendario"
+            <Button text="📅  Calendario"
                     onAction="#cargarCalendario"
                     styleClass="sidebar-button"/>
 
-            <Button text="Acceso"
+            <Button text=" 🚪  Acceso"
                     onAction="#cargarAcceso"
                     styleClass="sidebar-button"/>
         
 
-            <Button text="Inventario"
+            <Button text="🏋  Inventario"
                     onAction="#cargarInventario"
                     styleClass="sidebar-button"/>
 
-            <Button text="Reportes"
+            <Button text="📊  Reportes"
                     onAction="#cargarReportes"
                     styleClass="sidebar-button"/>
 
@@ -77,7 +78,7 @@
         <StackPane fx:id="contenedor"
            maxWidth="Infinity"
            maxHeight="Infinity"
-           style="-fx-padding: 20;"/>
+           styleClass="content-panel"/>
     </center>
 
 </BorderPane>

@@ -9,7 +9,7 @@ import java.util.List;
 public class ClienteService {
 
     private List<Cliente> clientes;
-    private final String ARCHIVO = "dist/clientes.dat";
+    private final String ARCHIVO = "clientes.dat";
 
     public ClienteService() {
         Object data = Serializador.cargar(ARCHIVO);

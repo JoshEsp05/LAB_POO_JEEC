@@ -12,7 +12,7 @@ import javafx.scene.control.Alert;
 public class MembresiaService {
 
     private List<Membresia> membresias;
-    private final String ARCHIVO = "dist/membresias.dat";
+    private final String ARCHIVO = "membresias.dat";
     private List<Membresia> notificados = new ArrayList<>();
 
     public MembresiaService() {

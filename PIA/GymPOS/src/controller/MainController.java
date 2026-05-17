@@ -27,6 +27,9 @@ public class MainController {
 
     @FXML
     public void initialize() {
+        
+        tablaClientes.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_FLEX_LAST_COLUMN);
+
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
@@ -74,7 +77,6 @@ public class MainController {
                 }
             }
         });
-
 
 
         tablaClientes.setOnMouseClicked(e -> cargarClienteSeleccionado());

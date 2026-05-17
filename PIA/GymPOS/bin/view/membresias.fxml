@@ -1,25 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
 
-<VBox spacing="10" alignment="CENTER"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="controller.MembresiaController">
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controller.MembresiaController"
+           style="-fx-padding: 25;">
 
-    <Label text="Sistema de Membresías" />
+    <VBox spacing="20"
+          alignment="TOP_CENTER"
+          maxWidth="950">
 
-    <ComboBox fx:id="comboClientes" promptText="Selecciona Cliente"/>
-    <ComboBox fx:id="comboPlanes" promptText="Selecciona Plan"/>
+        <!-- TÍTULO -->
+        <Label text="Sistema de Membresías"
+               styleClass="section-title"/>
 
-    <Button text="Asignar Membresía" onAction="#asignarMembresia"/>
+        <!-- CARD -->
+        <VBox spacing="15"
+              alignment="CENTER"
+              styleClass="card"
+              maxWidth="500">
 
-    <TableView fx:id="tablaMembresias" prefWidth="500">
-        <columns>
-            <TableColumn fx:id="colCliente" text="Cliente" prefWidth="150"/>
-            <TableColumn fx:id="colPlan" text="Plan" prefWidth="150"/>
-            <TableColumn fx:id="colEstado" text="Estado" prefWidth="100"/>
-        </columns>
-    </TableView>
+            <ComboBox fx:id="comboClientes"
+                      promptText="Selecciona Cliente"
+                      prefWidth="350"/>
 
-</VBox>
+            <ComboBox fx:id="comboPlanes"
+                      promptText="Selecciona Plan"
+                      prefWidth="350"/>
+
+            <Button text="Asignar Membresía"
+                    onAction="#asignarMembresia"
+                    prefWidth="350"
+                    styleClass="primary-button"/>
+
+        </VBox>
+
+        <!-- TABLA -->
+        <TableView fx:id="tablaMembresias"
+                   prefWidth="900"
+                   VBox.vgrow="ALWAYS">
+
+            <columns>
+
+                <TableColumn fx:id="colCliente"
+                             text="Cliente"
+                             prefWidth="300"/>
+
+                <TableColumn fx:id="colPlan"
+                             text="Plan"
+                             prefWidth="250"/>
+
+                <TableColumn fx:id="colEstado"
+                             text="Estado"
+                             prefWidth="200"/>
+
+            </columns>
+
+        </TableView>
+
+    </VBox>
+
+</StackPane>

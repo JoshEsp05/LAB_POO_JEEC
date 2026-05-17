@@ -1,16 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
 
-<VBox spacing="10" alignment="CENTER"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="controller.AccesoController">
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controller.AccesoController"
+           style="-fx-padding: 25;">
 
-    <Label text="Control de Acceso"/>
+    <VBox spacing="25"
+          alignment="TOP_CENTER"
+          maxWidth="700">
 
-    <ComboBox fx:id="comboClientes" promptText="Selecciona Cliente"/>
+        <!-- TÍTULO -->
+        <Label text="Control de Acceso"
+               styleClass="section-title"/>
 
-    <Button text="Registrar Entrada" onAction="#registrarEntrada"/>
+        <!-- CARD -->
+        <VBox spacing="18"
+              alignment="CENTER"
+              styleClass="card"
+              maxWidth="450">
 
-</VBox>
+            <Label text="Registrar entrada de cliente"
+                   style="-fx-font-size: 16px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #374151;"/>
+
+            <ComboBox fx:id="comboClientes"
+                      promptText="Selecciona Cliente"
+                      prefWidth="350"/>
+
+            <Button text="Registrar Entrada"
+                    onAction="#registrarEntrada"
+                    styleClass="primary-button"
+                    prefWidth="350"/>
+
+        </VBox>
+
+    </VBox>
+
+</StackPane>

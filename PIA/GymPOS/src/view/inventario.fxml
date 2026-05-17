@@ -1,53 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
 
-<VBox spacing="10"
-      alignment="CENTER"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="controller.InventarioController">
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controller.InventarioController"
+           style="-fx-padding: 25;">
 
-    <Label text="Control de Inventario"
-           style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <VBox spacing="20"
+          alignment="TOP_CENTER"
+          maxWidth="950">
 
-    <TextField fx:id="txtNombre"
-               promptText="Nombre del equipo"/>
+        <!-- TÍTULO -->
+        <Label text="Control de Inventario"
+               styleClass="section-title"/>
 
-    <TextField fx:id="txtCantidad"
-               promptText="Cantidad"/>
+        <!-- CARD FORMULARIO -->
+        <VBox spacing="15"
+              alignment="CENTER"
+              styleClass="card"
+              maxWidth="500">
 
-    <ComboBox fx:id="comboEstado"
-              promptText="Estado"/>
+            <TextField fx:id="txtNombre"
+                       promptText="Nombre del equipo"
+                       prefWidth="350"/>
 
-    <Button text="Agregar Equipo"
-            onAction="#agregarEquipo"/>
+            <TextField fx:id="txtCantidad"
+                       promptText="Cantidad"
+                       prefWidth="350"/>
 
-    <Button text="Actualizar Equipo"
-        onAction="#actualizarEquipo"/>
+            <ComboBox fx:id="comboEstado"
+                      promptText="Estado del equipo"
+                      prefWidth="350"/>
 
-    <Button text="Eliminar Equipo"
-            onAction="#eliminarEquipo"/>
+            <!-- BOTONES -->
+            <HBox spacing="10"
+                   alignment="CENTER">
 
-    <TableView fx:id="tablaEquipos"
-               prefWidth="600">
+                <Button text="Agregar"
+                        onAction="#agregarEquipo"
+                        styleClass="primary-button"/>
 
-        <columns>
+                <Button text="Actualizar"
+                        onAction="#actualizarEquipo"
+                        styleClass="secondary-button"/>
 
-            <TableColumn fx:id="colNombre"
-                         text="Equipo"
-                         prefWidth="200"/>
+                <Button text="Eliminar"
+                        onAction="#eliminarEquipo"
+                        styleClass="danger-button"/>
 
-            <TableColumn fx:id="colCantidad"
-                         text="Cantidad"
-                         prefWidth="150"/>
+            </HBox>
 
-            <TableColumn fx:id="colEstado"
-                         text="Estado"
-                         prefWidth="200"/>
+        </VBox>
 
-        </columns>
+        <!-- TABLA -->
+        <TableView fx:id="tablaEquipos"
+                   prefWidth="900"
+                   VBox.vgrow="ALWAYS">
 
-    </TableView>
+            <columns>
 
-</VBox>
+                <TableColumn fx:id="colNombre"
+                             text="Equipo"
+                             prefWidth="300"/>
+
+                <TableColumn fx:id="colCantidad"
+                             text="Cantidad"
+                             prefWidth="180"/>
+
+                <TableColumn fx:id="colEstado"
+                             text="Estado"
+                             prefWidth="250"/>
+
+            </columns>
+
+        </TableView>
+
+    </VBox>
+
+</StackPane>

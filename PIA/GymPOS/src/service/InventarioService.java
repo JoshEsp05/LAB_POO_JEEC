@@ -10,7 +10,7 @@ public class InventarioService {
 
     private List<Equipo> equipos;
 
-    private final String ARCHIVO = "dist/inventario.dat";
+    private final String ARCHIVO = "inventario.dat";
 
     public InventarioService() {
 

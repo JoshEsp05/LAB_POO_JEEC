@@ -24,6 +24,8 @@ public class InventarioController {
 
     @FXML
     public void initialize() {
+        
+        tablaEquipos.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_FLEX_LAST_COLUMN);
 
         colNombre.setCellValueFactory(
             new PropertyValueFactory<>("nombre")

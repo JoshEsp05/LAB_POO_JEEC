@@ -23,6 +23,8 @@ public class MembresiaController {
     @FXML
     public void initialize() {
 
+        tablaMembresias.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_FLEX_LAST_COLUMN);
+
         tablaMembresias.getItems().setAll(membresiaService.obtenerMembresias());
         // columnas
         colCliente.setCellValueFactory(cell ->
@@ -42,6 +44,7 @@ public class MembresiaController {
                 cell.getValue().estaActiva() ? "Activa" : "Vencida"
             )
         );
+
 
         colCliente.setStyle("-fx-alignment: CENTER;");
         colPlan.setStyle("-fx-alignment: CENTER;");

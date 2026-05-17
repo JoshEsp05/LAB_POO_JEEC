@@ -7,7 +7,7 @@
             fx:controller="controller.CalendarioController">
 
     <top>
-        <Label text="Calendario de Clases Grupales"
+        <Label text="Calendario de Clases Grupales" styleClass="section-title"
                style="-fx-font-size: 24px; -fx-font-weight: bold;"
                BorderPane.alignment="CENTER"/>
     </top>

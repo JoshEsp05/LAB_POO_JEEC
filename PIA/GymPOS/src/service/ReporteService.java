@@ -10,7 +10,7 @@ public class ReporteService {
 
     public void generarReporteClientes(List<Cliente> clientes) {
 
-        try (FileWriter writer = new FileWriter("dist/reporte_clientes.txt")) {
+        try (FileWriter writer = new FileWriter("reporte_clientes.txt")) {
 
             writer.write("=== REPORTE DE CLIENTES ===\n\n");
 

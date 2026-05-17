@@ -1,31 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
 
-<VBox spacing="10" alignment="CENTER"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="controller.MainController">
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controller.MainController"
+           style="-fx-padding: 25;">
 
-    <Label text="Gestión de Clientes" />
+    <VBox spacing="20"
+          alignment="TOP_CENTER"
+          maxWidth="950">
 
-    <TextField fx:id="txtId" promptText="ID"/>
-    <TextField fx:id="txtNombre" promptText="Nombre"/>
-    <TextField fx:id="txtEmail" promptText="Email"/>
+        <!-- TÍTULO -->
+        <Label text="Gestión de Clientes"
+               styleClass="section-title"/>
 
-    <Button fx:id="btnAgregar" text="Agregar Cliente" onAction="#agregarCliente"/>
-    <Button text="Eliminar Cliente" onAction="#eliminarCliente"/>
-    <Button text="Actualizar Cliente" onAction="#actualizarCliente"/>
-    <Button text="Generar Reporte" onAction="#generarReporte"/>
-    
+        <!-- FORMULARIO -->
+        <VBox spacing="12"
+              alignment="CENTER"
+              styleClass="card"
+              maxWidth="450">
 
-    <TableView fx:id="tablaClientes" prefWidth="400">
-        <columns>
-            <TableColumn fx:id="colId" text="ID" prefWidth="100"/>
-            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150"/>
-            <TableColumn fx:id="colEmail" text="Email" prefWidth="150"/>
-            <TableColumn fx:id="colMembresia" text="Membresía" prefWidth="120"/>
-        </columns>
-    </TableView>
+            <TextField fx:id="txtId"
+                       promptText="ID del Cliente"
+                       editable="false"
+                       prefWidth="350"/>
 
-</VBox>
+            <TextField fx:id="txtNombre"
+                       promptText="Nombre"
+                       prefWidth="350"/>
+
+            <TextField fx:id="txtEmail"
+                       promptText="Correo Electrónico"
+                       prefWidth="350"/>
+
+            <!-- BOTONES -->
+            <HBox spacing="10"
+                   alignment="CENTER">
+
+                <Button fx:id="btnAgregar"
+                        text="Agregar"
+                        onAction="#agregarCliente"
+                        styleClass="primary-button"/>
+
+                <Button text="Actualizar"
+                        onAction="#actualizarCliente"
+                        styleClass="secondary-button"/>
+
+                <Button text="Eliminar"
+                        onAction="#eliminarCliente"
+                        styleClass="danger-button"/>
+
+            </HBox>
+
+            <Button text="Generar Reporte"
+                    onAction="#generarReporte"
+                    styleClass="report-button"
+                    prefWidth="350"/>
+
+        </VBox>
+
+        <!-- TABLA -->
+        <TableView fx:id="tablaClientes"
+                   prefWidth="900"
+                   VBox.vgrow="ALWAYS">
+
+            <columns>
+
+                <TableColumn fx:id="colId"
+                             text="ID"
+                             prefWidth="120"/>
+
+                <TableColumn fx:id="colNombre"
+                             text="Nombre"
+                             prefWidth="250"/>
+
+                <TableColumn fx:id="colEmail"
+                             text="Correo"
+                             prefWidth="300"/>
+
+                <TableColumn fx:id="colMembresia"
+                             text="Membresía"
+                             prefWidth="180"/>
+
+            </columns>
+
+        </TableView>
+
+    </VBox>
+
+</StackPane>
